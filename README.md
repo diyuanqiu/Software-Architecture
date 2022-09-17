@@ -15,4 +15,4 @@
   * Streaming Downloads
   * Automatic honoring of .netrc
   * Chunked HTTP Requests
-* Requires high performance and security.
+*Requires* high performance and security.
