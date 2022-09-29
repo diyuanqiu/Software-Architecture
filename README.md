@@ -2,7 +2,8 @@
 
 ## Context
 
-Requests is a simple, yet elegant, HTTP library written in Python that allows you to send HTTP/1.1 requests extremely easily. It is one of the most downloaded Python packages.
+Requests is a simple, yet elegant, HTTP library written in Python that allows you to send HTTP/1.1 requests extremely easily. It is one of the most downloaded Python packages.     Requests officially supports Python 3.7+, and runs great on PyPy.
+
 
 ## Features
 
@@ -47,7 +48,7 @@ HTTP authentication is on the server-side asking for some authentication informa
 
 ### Usability
 
-Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default. It abstracts the complexities of making requests behind a beautiful, simple API.
+Requests is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default. It abstracts the complexities of making requests behind a beautiful, simple API.
 
 ```python
 >>> import requests
@@ -71,3 +72,19 @@ Requests supports streaming uploads, which allow you to send large streams or fi
 ### Security
 
 The security is also taken care of the help of authentication module support.When makeing request, the request is made to the URL given and it could be a secure or non-secure URL.
+
+## Key Drivers
+
+### Usability
+
+Requests is designed to be the simplest way possible to make http calls which is easy to get started.
+
+### High Expansibility
+
+Requests welcomes other contributors to update or advance content.
+
+## Earliest Design Decisions
+
+* Requests should be able to handle concurrency problems.
+* Requests should be able to support python 3.x .
+* Requests should have exhaustive unit tests.
