@@ -85,6 +85,9 @@ Requests welcomes other contributors to update or advance content.
 
 ## Earliest Design Decisions
 
-* Requests should be able to handle concurrency problems.
-* Requests should be able to support python 3.x .
-* Requests should have exhaustive unit tests.
+1. Requests should be BDFL(Benevolent Dictator For Life), which when other contributors make contribution to the project, founders will consolidate all resources to build up requests.
+2. Requests should be able to handle concurrency problems.
+3. Requests should be able to support python 3.x .
+4. Requests should have exhaustive unit tests.
+
+##### The first decision is the leadership strategy of Requests. The other three decisions are the basic requirement of Requests.
