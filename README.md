@@ -2,7 +2,7 @@
 
 ## Context
 
-Requests is a simple, yet elegant, HTTP library written in Python that allows you to send HTTP/1.1 requests extremely easily. It is one of the most downloaded Python packages.     Requests officially supports Python 3.7+, and runs great on PyPy.
+Requests is a simple, yet elegant, HTTP library written in Python that allows you to send HTTP/1.1 requests extremely easily. It is one of the most downloaded Python packages. Requests officially supports Python 3.7+, and runs great on PyPy.
 
 ### Technical Context
 
@@ -13,7 +13,6 @@ Most existing Python modules for sending HTTP requests are extremely verbose and
 #### Augmentability
 
 Most existing Python modules for sending HTTP requests weren't able to handle the GET/POST ... methods in complex application scenarios. They may be hard to process the sent and received requests.
-
 
 ## Features
 
@@ -54,7 +53,6 @@ SSL certificate is a security feature that comes with secure urls. When you use 
 
 HTTP authentication is on the server-side asking for some authentication information like username, password when the client requests a URL. This is an additional security for the request and the response being exchanged between the client and the server.
 
-
 ## Quality Attributes
 
 ### Usability
@@ -84,7 +82,6 @@ Requests supports streaming uploads, which allow you to send large streams or fi
 
 The security is also taken care of the help of authentication module support.When makeing request, the request is made to the URL given and it could be a secure or non-secure URL.
 
-
 ## Key Drivers
 
 ### Usability
@@ -104,7 +101,6 @@ Requests welcomes other contributors to update or advance content.
 
 #### The first decision is the leadership strategy of Requests. The other three decisions are the basic requirement of Requests.
 
-
 ## Key StakeHolders
 
 ### Business Manager
@@ -112,6 +108,7 @@ Requests welcomes other contributors to update or advance content.
 Responsible for the functioning of the business/organizational entity that owns the system. Includes managerial/executive responsibility, responsibility for defining business processes, etc.
 
 #### Concerns:
+
 * Requests should be simpler and easier to use and understand than other Python modules for sending HTTP requests.
 * Requests should be open.
 
@@ -120,6 +117,7 @@ Responsible for the functioning of the business/organizational entity that owns 
 Responsible for taking individual components and integrating them, according to the architecture and system designs.
 
 #### Concerns:
+
 * Each components or parts of Requests should be neat and clear.
 
 ### Customer
@@ -127,5 +125,6 @@ Responsible for taking individual components and integrating them, according to 
 Pays for the system and ensures its delivery. The customer often speaks for or represents the end user, especially in a government acquisition context.
 
 #### Concerns:
+
 * Requests should be easy to use and have exhaustive documentation for guiding.
 * Requests should be stable and not changes often.
