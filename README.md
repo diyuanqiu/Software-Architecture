@@ -94,12 +94,8 @@ Requests welcomes other contributors to update or advance content.
 
 ## Earliest Design Decisions
 
-* Requests should be BDFL(Benevolent Dictator For Life), which when other contributors make contribution to the project, founders will consolidate all resources to build up requests.
-* Requests should be able to supports Python 2.6-2.7 and 3.x, and can should perfectly in PyPy. These editions are the most used today.
-* Requests should be flexible, which we should insert a hook system in the project. The hook system is most often used in some process processing. This process often has many steps. These hook functions are often mounted in these steps to provide flexibility for adding additional operations. However, it may be hard to prepare and write.
-* Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.
-
-#### The first decision is the leadership strategy of Requests. The other three decisions are the basic requirement of Requests.
+* Requests is built with unit test in mind. Test fixtures was added in [75b499dd046060021db0c7a772dd34df9374a30b](https://github.com/psf/requests/commit/75b499dd046060021db0c7a772dd34df9374a30b), which is the 4th commit.
+* `urllib3` was imported in [84434fddee4b1423240e66de5b5c7c0ecaf6615d](https://github.com/psf/requests/commit/84434fddee4b1423240e66de5b5c7c0ecaf6615d), replacing `urllib2`. Right now, [much of the Python ecosystem uses urllib3](https://urllib3.readthedocs.io/en/stable/index.html#who-uses).
 
 ## Key StakeHolders
 
