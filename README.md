@@ -8,11 +8,66 @@ Requests is a simple, yet elegant, HTTP library written in Python that allows yo
 
 #### Usability
 
-Most existing Python modules for sending HTTP requests are extremely verbose and cumbersome. Python's builtin urllib2 module provides most of the HTTP capabilities you should need, but the api is thoroughly broken. It requires an enormous amount of work (even method overrides) to perform the simplest of tasks. What's more, those modules' documentation is simple and hard to read while their source codes are hard to understand either.
+When a large file is requested to be transferred, the traditional python library may not be transferred successfully. When the server communicates with the client, too long communication time will cause the cookie to expire and disconnect, or the sent request header which is too long would make the received information incomplete.
 
 #### Augmentability
 
-Most existing Python modules for sending HTTP requests weren't able to handle the GET/POST ... methods in complex application scenarios. They may be hard to process the sent and received requests.
+When a large number of http requests are sent and need to be processed separately, the broken api of the traditional python library would cause the code and structure too complicated to understand.
+
+#### Environment
+
+##### Certifi CA Bundle
+
+Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.
+
+##### CacheControl
+
+CacheControl is an extension that adds a full HTTP cache to Requests. This makes your web requests substantially more efficient, and should be used whenever you’re making a lot of web requests.
+
+##### Requests-Toolbelt
+
+Requests-Toolbelt is a collection of utilities that some users of Requests may desire, but do not belong in Requests proper. This library is actively maintained by members of the Requests core team, and reflects the functionality most requested by users within the community.
+
+##### Requests-Threads
+
+Requests-Threads is a Requests session that returns the amazing Twisted’s awaitable Deferreds instead of Response objects. This allows the use of async/await keyword usage on Python 3, or Twisted’s style of programming, if desired.
+
+##### Requests-OAuthlib
+
+Requests-oauthlib makes it possible to do the OAuth dance from Requests automatically. This is useful for the large number of websites that use OAuth to provide authentication. It also provides a lot of tweaks that handle ways that specific OAuth providers differ from the standard specifications.
+
+##### Betamax
+
+Betamax records your HTTP interactions so the NSA does not have to. A VCR imitation designed only for Python-Requests.
+
+
+## Key StakeHolders
+
+### Business Manager
+
+Responsible for the functioning of the business/organizational entity that owns the system. Includes managerial/executive responsibility, responsibility for defining business processes, etc.
+
+#### Concerns:
+
+* Requests should be simpler and easier to use and understand than other Python modules for sending HTTP requests.
+* Requests should be open.
+
+### Integrator
+
+Responsible for taking individual components and integrating them, according to the architecture and system designs.
+
+#### Concerns:
+
+* Each components or parts of Requests should be neat and clear.
+
+### Customer
+
+Pays for the system and ensures its delivery. The customer often speaks for or represents the end user, especially in a government acquisition context.
+
+#### Concerns:
+
+* Requests should be easy to use and have exhaustive documentation for guiding.
+* Requests should be stable and not changes often.
 
 ## Features
 
@@ -94,33 +149,7 @@ Requests welcomes other contributors to update or advance content.
 
 ## Earliest Design Decisions
 
-* Requests is built with unit test in mind. Test fixtures was added in [75b499dd046060021db0c7a772dd34df9374a30b](https://github.com/psf/requests/commit/75b499dd046060021db0c7a772dd34df9374a30b), which is the 4th commit.
-* `urllib3` was imported in [84434fddee4b1423240e66de5b5c7c0ecaf6615d](https://github.com/psf/requests/commit/84434fddee4b1423240e66de5b5c7c0ecaf6615d), replacing `urllib2`. Right now, [much of the Python ecosystem uses urllib3](https://urllib3.readthedocs.io/en/stable/index.html#who-uses).
-
-## Key StakeHolders
-
-### Business Manager
-
-Responsible for the functioning of the business/organizational entity that owns the system. Includes managerial/executive responsibility, responsibility for defining business processes, etc.
-
-#### Concerns:
-
-* Requests should be simpler and easier to use and understand than other Python modules for sending HTTP requests.
-* Requests should be open.
-
-### Integrator
-
-Responsible for taking individual components and integrating them, according to the architecture and system designs.
-
-#### Concerns:
-
-* Each components or parts of Requests should be neat and clear.
-
-### Customer
-
-Pays for the system and ensures its delivery. The customer often speaks for or represents the end user, especially in a government acquisition context.
-
-#### Concerns:
-
-* Requests should be easy to use and have exhaustive documentation for guiding.
-* Requests should be stable and not changes often.
+* To lead the whole of our project, Requests should be BDFL(Benevolent Dictator For Life), which when other contributors make contribution to the project, founders will consolidate all resources to build up requests.
+* To make it more convenient for our customers to use the library, Requests should be able to supports Python 2.6-2.7 and 3.x, and can should perfectly in PyPy. These editions are the most used today.
+* Requests should be flexible, which we should insert a hook system in the project. The hook system is most often used in some process processing. This process often has many steps. These hook functions are often mounted in these steps to provide flexibility for adding additional operations. However, it may be hard to prepare and write.
+* Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.
