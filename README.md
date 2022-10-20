@@ -143,13 +143,31 @@ The security is also taken care of the help of authentication module support.Whe
 
 Requests is designed to be the simplest way possible to make http calls which is easy to get started.
 
-### High Augmentability
+#### Scenario
+    Source: Users
+    Stimus: Wish to use the packages efficiently
+    Artifact: Requests system
+    Environment: Normal Operation
+    Response: Provide API; Re-use of already getted data
+    Response Measure: User satisfaction; Task time
 
-Requests welcomes other contributors to update or advance content.
+### High Scalability
+
+Requests welcomes other contributors to update or advance content. It can be smoothly updated and problem solved.
+
+#### Scenario
+    Source: Developer
+    Stimus: Want to update/modify system
+    Artifact: System architecture; System environment
+    Environment: Design time; Test time
+    Response: Makes modification without affecting other functionality; Tests modification
+    Response Measure: Effects to other elements; Costs of time and money
 
 ## Earliest Design Decisions
-
+![lead.jpg](./images/3.jpg)
 * To lead the whole of our project, Requests should be BDFL(Benevolent Dictator For Life), which when other contributors make contribution to the project, founders will consolidate all resources to build up requests.
 * To make it more convenient for our customers to use the library, Requests should be able to supports Python 2.6-2.7 and 3.x, and can should perfectly in PyPy. These editions are the most used today.
-* Requests should be flexible, which we should insert a hook system in the project. The hook system is most often used in some process processing. This process often has many steps. These hook functions are often mounted in these steps to provide flexibility for adding additional operations. However, it may be hard to prepare and write.
+* Requests should be usability, which we should insert a hook system in the project. It has a hook system that you can use to manipulate portions of the request process, or signal event handling. This process often has many steps. These hook functions are often mounted in these steps to provide flexibility for adding additional operations. However, it may be hard to prepare and write.
+![hook.png](./images/4.png)
 * Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.
+![api.png](./images/1.png)
