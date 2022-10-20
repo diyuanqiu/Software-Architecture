@@ -169,5 +169,6 @@ Requests welcomes other contributors to update or advance content. It can be smo
 * To make it more convenient for our customers to use the library, Requests should be able to supports Python 2.6-2.7 and 3.x, and can should perfectly in PyPy. These editions are the most used today.
 * Requests should be usability, which we should insert a hook system in the project. It has a hook system that you can use to manipulate portions of the request process, or signal event handling. This process often has many steps. These hook functions are often mounted in these steps to provide flexibility for adding additional operations. However, it may be hard to prepare and write.
 ![hook.png](./images/4.png)
-* Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.
+* Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.  
+
 ![api.png](./images/1.png)
