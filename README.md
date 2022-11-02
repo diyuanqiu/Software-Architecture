@@ -145,25 +145,42 @@ Requests is designed to be the simplest way possible to make http calls which is
 
 #### Scenario
     Source: Users
-    Stimus: Wish to use the packages efficiently
-    Artifact: Requests system
-    Environment: Normal Operation
-    Response: Provide API; Re-use of already getted data
-    Response Measure: User satisfaction; Task time
+    Stimus: Knowing the API function of system
+    Artifact: Requests Document
+    Environment: Start time
+    Response: Provide document of API function
+    Response Measure: Our document should be detailed that covered the function and usage of each api
 
-### High Scalability
+#### Tactics
+
+```
+Separate the UI: Requests is a simple HTTP library, one of the Python packages. Users and packages communicate through the api interface. Requests separates the api layer to control both the UI and inner structures easily.
+```
+
+
+
+### Modifiability
 
 Requests welcomes other contributors to update or advance content. It can be smoothly updated and problem solved.
 
 #### Scenario
     Source: Developer
-    Stimus: Want to update/modify system
-    Artifact: System architecture; System environment
+    Stimus: Update/Modify functionality
+    Artifact: Code
     Environment: Design time; Test time
-    Response: Makes modification without affecting other functionality; Tests modification
-    Response Measure: Effects to other elements; Costs of time and money
+    Response: Update made
+    Response Measure: less than three hours
+
+#### Tactics
+
+```
+Split Module: Requests divide the process of handling a http request into Session Module, Cookies Module, Auth Module, Status Code Module, etc and provide the utility with Models Module, Structure Module, Util Module, etc, which when making new modifications, the effort could be low.
+```
+
+
 
 ## Earliest Design Decisions
+
 ![lead.jpg](./images/3.jpg)
 * To lead the whole of our project, Requests should be BDFL(Benevolent Dictator For Life), which when other contributors make contribution to the project, founders will consolidate all resources to build up requests.
 * To make it more convenient for our customers to use the library, Requests should be able to supports Python 2.6-2.7 and 3.x, and can should perfectly in PyPy. These editions are the most used today.
