@@ -154,10 +154,10 @@ Requests is designed to be the simplest way possible to make http calls which is
 #### Tactics
 
 ```
-Separate the UI: Requests is a simple HTTP library, one of the Python packages. Users and packages communicate through the api interface. Requests separates the api layer to control both the UI and inner structures easily.
+Separate the UI: Requests is a simple HTTP library, one of the Python packages. 
+				 Users and packages communicate through the api interface. 
+				 Requests separates the api layer to control both the UI and inner structures easily.
 ```
-
-
 
 ### Modifiability
 
@@ -174,7 +174,8 @@ Requests welcomes other contributors to update or advance content. It can be smo
 #### Tactics
 
 ```
-Split Module: Requests divide the process of handling a http request into Session Module, Cookies Module, Auth Module, Status Code Module, etc and provide the utility with Models Module, Structure Module, Util Module, etc, which when making new modifications, the effort could be low.
+Split Module: Requests divide the process of handling a http request into Session Module, Cookies Module, Auth Module, Status                 Code Module, etc. 
+              Requests provide the utility with Models Module, Structure Module, Util Module, etc. When making new                             modifications, the effort could be low.
 ```
 
 
