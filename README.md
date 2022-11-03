@@ -145,11 +145,11 @@ Requests is designed to be the simplest way possible to make http calls which is
 
 #### Scenario
     Source: Users
-    Stimus: Knowing the API function of system
-    Artifact: Requests Document
-    Environment: Start time
-    Response: Provide document of API function
-    Response Measure: Our document should be detailed that covered the function and usage of each api
+    Stimus: Minimize impact of errors of using the wrong params in a function
+    Artifact: Excepetion handling system
+    Environment: Runtime
+    Response: Cancel the process of current operation and Report
+    Response Measure: Cancellation and Report takes less than 1 second
 
 #### Tactics
 
@@ -159,14 +159,16 @@ Users and packages communicate through the api interface.
 Requests separates the api layer to control both the UI and inner structures easily.
 ```
 
+![usability.png](./images/Usa Tactics.png)
+
 ### Modifiability
 
 Requests welcomes other contributors to update or advance content. It can be smoothly updated and problem solved.
 
 #### Scenario
     Source: Developer
-    Stimus: Update/Modify functionality
-    Artifact: Code
+    Stimus: Update/Modify the process of handling cookies
+    Artifact: Cookies managing system
     Environment: Design time; Test time
     Response: Update made
     Response Measure: less than three hours
@@ -174,11 +176,11 @@ Requests welcomes other contributors to update or advance content. It can be smo
 #### Tactics
 
 ```
-Split Module: Requests divide the process of handling a http request into Session Module, Cookies Module, Auth Module, Status Code Module, etc. 
-Requests provide the utility with Models Module, Structure Module, Util Module, etc. When making new modifications, the effort could be low.
+Split Module: Requests divide the process of handling a http request into Session Module, Cookies Module, Auth Module, etc. 
+Requests divide the standard part into Models Module, Structure Module, Status_Code Module, etc. When making new modifications, the effort could be low.
 ```
 
-
+![modification.png](./images/Modifi Tactics.png)
 
 ## Earliest Design Decisions
 
