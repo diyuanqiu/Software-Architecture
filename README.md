@@ -159,7 +159,7 @@ Users and packages communicate through the api interface.
 Requests separates the api layer to control both the UI and inner structures easily.
 ```
 
-![usability.png](./images/Usa Tactics.png)
+![usability.png](./images/UsaTactics.png)
 
 ### Modifiability
 
@@ -180,7 +180,7 @@ Split Module: Requests divide the process of handling a http request into Sessio
 Requests divide the standard part into Models Module, Structure Module, Status_Code Module, etc. When making new modifications, the effort could be low.
 ```
 
-![modification.png](./images/Modifi Tactics.png)
+![modification.png](./images/ModiTactics.png)
 
 ## Earliest Design Decisions
 
