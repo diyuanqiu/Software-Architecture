@@ -145,18 +145,18 @@ Requests is designed to be the simplest way possible to make http calls which is
 
 #### Scenario
     Source: Users
-    Stimus: Minimize impact of errors of using the wrong params in a function
-    Artifact: Excepetion handling system
+    Stimus: Minimize impact of slow-down when continuing calling api
+    Artifact: Session handling system
     Environment: Runtime
-    Response: Cancel the process of current operation and Report
-    Response Measure: Cancellation and Report takes less than 1 second
+    Response: Keep TCP connection alive
+    Response Measure: Api response takes less than 1 second
+
+![scenario.png](./images/Scenario1.png)
 
 #### Tactics
 
 ```
-Separate the UI: Requests is a simple HTTP library, one of the Python packages. 
-Users and packages communicate through the api interface. 
-Requests separates the api layer to control both the UI and inner structures easily.
+Keep-alive: Python requests are basically requests based on the TCP protocol. In order to keep the return speed when users call the API constantly, python requests provide a Session module to maintain the TCP connection.
 ```
 
 ![usability.png](./images/UsaTactics.png)
@@ -172,6 +172,8 @@ Requests welcomes other contributors to update or advance content. It can be smo
     Environment: Design time; Test time
     Response: Update made
     Response Measure: less than three hours
+
+![scenario.png](./images/Scenario2.png)
 
 #### Tactics
 
@@ -192,3 +194,11 @@ Requests divide the standard part into Models Module, Structure Module, Status_C
 * Requests should be simple to use, which we should encapsulate the http methods one by one in the API. It may be cockamamie to realise but benifit the structure of our code.  
 
 ![api.png](./images/1.png)
+
+## Architectural Pattern
+
+### Pipe & Filter Pattern
+
+Each stage will process the request. If the request passes, it will be passed to the next processing, and if it fails, the corresponding HTTP response will be returned.
+
+![pipe.png](./images/pipe.png)
