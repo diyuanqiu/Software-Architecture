@@ -199,6 +199,6 @@ Requests divide the standard part into Models Module, Structure Module, Status_C
 
 ### Pipe & Filter Pattern
 
-Each stage will process the request. If the request passes, it will be passed to the next processing, and if it fails, the corresponding HTTP response will be returned.
+Each stage will process the request. If the request passes, it will be passed to the next processing, and if it fails, the corresponding HTTP response will be returned. When creating a Request object, the session will be initialized, the default http header and http cookie information will be created, and the HTTPAdpater object will be created. After that, http verification and https certificate processing will be performed in the Auth model and Cert model, respectively. The request object will be added with the corresponding verification results, and finally the Response object will be formed. Binary data and the corresponding encoded text will be reserved respectively.
 
 ![pipe.png](./images/pipe.png)
