@@ -30,11 +30,11 @@ Requests-Toolbelt is a collection of utilities that some users of Requests may d
 
 ##### Requests-Threads
 
-Requests-Threads is a Requests session that returns the amazing Twisted’s awaitable Deferreds instead of Response objects. This allows the use of async/await keyword usage on Python 3, or Twisted’s style of programming, if desired.
+Requests-Threads is a Requests session that returns the amazing Twisted’s awaitable Deferred instead of Response objects. This allows the use of async/await keyword usage on Python 3, or Twisted’s style of programming, if desired.
 
 ##### Requests-OAuthlib
 
-Requests-oauthlib makes it possible to do the OAuth dance from Requests automatically. This is useful for the large number of websites that use OAuth to provide authentication. It also provides a lot of tweaks that handle ways that specific OAuth providers differ from the standard specifications.
+Requests-OAuthlib makes it possible to do the OAuth dance from Requests automatically. This is useful for the large number of websites that use OAuth to provide authentication. It also provides a lot of tweaks that handle ways that specific OAuth providers differ from the standard specifications.
 
 ##### Betamax
 
@@ -134,7 +134,7 @@ Requests supports streaming uploads, which allow you to send large streams or fi
 
 ### Security
 
-The security is also taken care of the help of authentication module support.When makeing request, the request is made to the URL given and it could be a secure or non-secure URL.
+The security is also taken care of the help of authentication module support.When making request, the request is made to the URL given and it could be a secure or non-secure URL.
 
 ## Key Drivers
 
@@ -146,7 +146,7 @@ Requests is designed to be the simplest way possible to make http calls which is
 
 ```
 Source: Users
-Stimus: Minimize impact of slow-down when continuing calling api
+Stimulus: Minimize impact of slow-down when continuing calling api
 Artifact: Session handling system
 Environment: Runtime
 Response: Keep TCP connection alive
@@ -171,7 +171,7 @@ Requests welcomes other contributors to update or advance content. It can be smo
 
 ```
 Source: Developer
-Stimus: Update/Modify the process of handling cookies
+Stimulus: Update/Modify the process of handling cookies
 Artifact: Cookies managing system
 Environment: Design time; Test time
 Response: Update made
